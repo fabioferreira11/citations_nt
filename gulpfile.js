@@ -34,9 +34,9 @@ gulp.task('minify-js', function() {
 // BEGIN: replace-task
 gulp.task('replace', function() {
     return gulp.src('src/index.html')
-        // .pipe(replace('style.css', 'style.min.css'))
+        .pipe(replace('style.css', 'style.min.css'))
         .pipe(replace('script.js', 'script.min.js'))
-        // .pipe(replace(/\.png/g, '.webp'))
+        .pipe(replace(/\.png/g, '.webp'))
         .pipe(gulp.dest('dist/'));
 });
 
