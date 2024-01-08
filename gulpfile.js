@@ -1,25 +1,25 @@
 // BEGIN: webp-conversion-task
 const gulp = require('gulp');
-// const webp = require('gulp-webp');
-// const cssnano = require('gulp-cssnano');
+const webp = require('gulp-webp');
+const cssnano = require('gulp-cssnano');
 const uglify = require('gulp-uglify');
 const rename = require('gulp-rename');
 const replace = require('gulp-replace');
 
-// gulp.task('convert-images', function() {
-//     return gulp.src('src/img/*.{png,jpg,jpeg}')
-//         .pipe(webp())
-//         .pipe(gulp.dest('dist/img/'));
-// });
+gulp.task('convert-images', function() {
+    return gulp.src('src/img/*.{png,jpg,jpeg}')
+        .pipe(webp())
+        .pipe(gulp.dest('dist/img/'));
+});
 // END: webp-conversion-task
 
 // BEGIN: css-minification-task
-// gulp.task('minify-css', function() {
-//     return gulp.src('src/css/*.css')
-//         .pipe(cssnano())
-//         .pipe(rename({suffix: '.min'}))
-//         .pipe(gulp.dest('dist/css/'));
-// });
+gulp.task('minify-css', function() {
+    return gulp.src('src/css/*.css')
+        .pipe(cssnano())
+        .pipe(rename({suffix: '.min'}))
+        .pipe(gulp.dest('dist/css/'));
+});
 // END: css-minification-task
 
 // BEGIN: js-minification-task
@@ -43,7 +43,6 @@ gulp.task('replace', function() {
 // END: replace-task
 
 // BEGIN: all-tasks
-// gulp.task('default', gulp.series('convert-images', 'minify-css', 'minify-js','replace'));
-gulp.task('default', gulp.series('minify-js','replace'));
+gulp.task('default', gulp.series('convert-images', 'minify-css', 'minify-js','replace'));
 // END: all-tasks
 

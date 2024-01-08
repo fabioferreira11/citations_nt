@@ -27,7 +27,7 @@ $(document).ready(function() {
 
                 // Afficher toutes les informations dans le conteneur HTML
                 $('#contenu').html(
-                    '<h1 class="citation text-center text-gray-600">' + randomObject.Citation + ' </h1>' +
+                    '<h1 class="citation text-center text-white">' + randomObject.Citation + ' </h1>' +
                     '<div class="flex flex-row w-full justify-center items-center"><img src="' + randomObject.URLImage + '" alt="Auteur" class="my-4 rounded-full max-w-14">'+
                     '<p class="auteur text-center mx-3 text-white">' + randomObject.Auteur + '</p>' +
                     '<p class="description text-center ml-3 text-gray-600">' + randomObject.Description + '</p> </div>'
