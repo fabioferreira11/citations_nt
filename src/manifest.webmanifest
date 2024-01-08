@@ -1,7 +1,7 @@
 {
     "name": "citations nt fabio",
     "short_name": "citations fabio",
-    "start_url": "index.html",
+    "start_url": "../index.html",
     "display": "fullscreen",
     "background_color": "#1E293B",
     "theme_color": "#1E293B",
